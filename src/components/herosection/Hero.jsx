@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Button from "../ui/Button";
 
 const Hero = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
+
     return (
-        <div className="bg-[#072724] w-full h-full overflow-hidden p-5 relative flex items-center justify-center">
+        <div className="bg-[#072724] w-full font-Lora h-full overflow-hidden p-5 relative md:px-48">
             {/* Overlay */}
             <div className="absolute inset-0 grid place-items-center w-full h-full">
                 <img
@@ -12,23 +21,42 @@ const Hero = () => {
                     className="w-full h-full object-cover"
                 />
             </div>
+
             {/* Content */}
-            <div className="relative  py-24 text-white text-center">
-                <div className="max-w-4xl space-y-3">
-                    <h1 className="text-xl text-[#D89D55] font-bold">Rescue, Rehabilitate, Rehome</h1>
-                    <h2 className="text-7xl font-bold mt-2">Making a Difference in Animal Lives</h2>
-                    <span className="mt-4 text-lg">
+            <div className="relative py-18 text-white flex items-center justify-center text-center">
+                <div className="max-w-4xl space-y-3" data-aos="fade-up">
+                    <h1 className="md:text-xl text-sm text-[#D89D55] font-bold" data-aos="fade-down">
+                        Rescue, Rehabilitate, Rehome
+                    </h1>
+                    <h2
+                        className="md:text-7xl text-5xl font-bold mt-2"
+                        data-aos="zoom-in"
+                        data-aos-delay="200"
+                    >
+                        Making a Difference in Animal Lives
+                    </h2>
+                    <span
+                        className="mt-4 font-SourceSans text-sm text-center md:text-lg block"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
                         At our shelter charity, we believe that compassion has the power to
                         change lives. Every animal deserves a loving home, and our shelter
                         charity is committed to making that a reality.
                     </span>
-                    <div className="mt-6 w-full grid place-items-center">
+                    <div className="mt-6 w-full grid place-items-center" data-aos="fade-up" data-aos-delay="600">
                         <Button item={"Donate Now"} />
                     </div>
                 </div>
-                <div className="w-full pt-12 h-full">
-                    <img src="/assets/image/heroimage-removebg-preview.png" alt="" className="w-full h-full object-cover" />
-                </div>
+            </div>
+
+            {/* Hero Image */}
+            <div className="w-full -mt-20 h-full" data-aos="zoom-in-up" data-aos-delay="700">
+                <img
+                    src="/assets/image/heroimage-removebg-preview.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                />
             </div>
         </div>
     );
