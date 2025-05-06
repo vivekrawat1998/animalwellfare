@@ -12,7 +12,6 @@ const Joinmisson = () => {
             }}
         >
             {/* overlay */}
-           
             <div className="relative  grid place-items-center md:py-24 text-white text-center"
             >
                 <div className='md:max-w-3xl  space-y-3'>

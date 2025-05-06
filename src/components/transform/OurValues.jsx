@@ -75,11 +75,12 @@ const OurValues = () => {
                 data-aos="fade-up"
                 data-aos-delay="300"
                 className='w-full flex justify-center mt-10'>
-                <video
+                {/* <video
                     src="/assets/video/animal_rescue.mp4"
                     controls
                     className="md:w-[60vw] md:h-[30vw] rounded-2xl object-cover"
-                />
+                /> */}
+                <img src="/assets/image/members.webp" alt='members' className='md:w-[60vw] md:h-[30vw] rounded-2xl object-cover'  /> 
             </div>
         </div>
     );

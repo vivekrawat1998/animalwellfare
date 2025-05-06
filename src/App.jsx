@@ -11,10 +11,12 @@ import Team from './components/team/Team'
 import Contactus from './components/contactus/Contactus'
 import DonatePopup from './components/ui/Popup'
 import DonateNow from './components/Donatepage'
+import ScrollToTop from './components/ui/Scrolltotop'
 function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Hompage />} />
@@ -25,7 +27,7 @@ function App() {
           <Route path='/donate' element={<DonateNow />} />
         </Route>
       </Routes>
-      <DonatePopup/>
+      <DonatePopup />
     </>
   )
 }

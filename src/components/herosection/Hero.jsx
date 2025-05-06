@@ -12,7 +12,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="bg-[#072724] w-full font-Lora h-full overflow-hidden p-5 relative md:px-48">
+        <div className="bg-[#072724] w-full font-Lora h-full overflow-hidden p-5 relative lg:px-48 md:px-20 mx-auto">
             {/* Overlay */}
             <div className="absolute inset-0 grid place-items-center w-full h-full">
                 <img
@@ -53,7 +53,7 @@ const Hero = () => {
             {/* Hero Image */}
             <div className="w-full -mt-20 h-full" data-aos="zoom-in-up" data-aos-delay="700">
                 <img
-                    src="/assets/image/heroimage-removebg-preview.png"
+                    src="/assets/image/Home (2) (2).webp"
                     alt=""
                     className="w-full h-full object-cover"
                 />

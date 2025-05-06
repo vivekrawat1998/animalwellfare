@@ -31,11 +31,10 @@ const Transform = () => {
                     </p>
                     <img
                         className='w-full h-auto object-cover rounded-lg shadow-lg'
-                        src='https://atria.peerduck.com/wp-content/uploads/2024/03/3kjgb3-600x762.png'
+                        src='/assets/image/namanphoto.PNG'
                         alt='Animal Rescue'
                     />
                 </div>
-
                 {/* Right Section */}
                 <div
                     data-aos="fade-up"
@@ -43,7 +42,7 @@ const Transform = () => {
                     className='w-full space-y-5'>
                     <img
                         className='w-full h-auto object-cover rounded-lg shadow-lg'
-                        src='https://atria.peerduck.com/wp-content/uploads/2024/03/3kjgb3-600x762.png'
+                        src='/assets/image/namanpics.webp'
                         alt='Animal Rescue'
                     />
                     <h3 className='text-lg font-semibold text-[#D89D55]'>Pawsitive Impact</h3>

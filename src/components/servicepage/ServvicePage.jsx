@@ -11,7 +11,6 @@ const ServicePage = () => {
                 setShouldStart(true);
             }
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
@@ -34,7 +33,7 @@ const ServicePage = () => {
     return (
         <div className='w-full mt-20 font-Lora md:p-10 px-5 p-5 grid md:grid-cols-2 grid-cols-1 md:gap-30 md:px-10'>
             <div className='grid place-items-center'>
-                <img src="/assets/image/serviceimage.png" alt="" className="md:w-[40vw] h-full rounded-xl object-cover" />
+                <img src="/assets/image/medication.webp" alt="" className="md:w-[40vw] h-full rounded-xl object-cover" />
             </div>
 
             <div className=' leading-30   pace-y-3 pt-16'>

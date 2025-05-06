@@ -3,9 +3,9 @@ import React from 'react';
 const FixedUi = () => {
   return (
     <div
-      className="relative py-20 w-full font-Lora flex flex-col md:flex-row items-center justify-center md:gap-20 px-4"
+      className="relative py-28 w-full font-Lora flex flex-col md:flex-row items-center justify-center md:gap-20 px-4"
       style={{
-        backgroundImage: "url('/assets/image/dog bg.jpeg')",
+        backgroundImage: "url('/assets/image/aashiyana.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

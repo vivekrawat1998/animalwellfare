@@ -1,50 +1,11 @@
 import React from 'react'
 import Header from '../ui/Header'
+import { useApi } from "../context/Apiprovider";
 
 const Team = () => {
-    const teamMembers = [
-        {
-
-            name: 'John Doe',
-            position: 'Founder',
-            image: '/assets/image/founder.png',
-        },
-        {
-            name: 'Jane Doe',
-            position: 'Director',
-            image: '/assets/image/team2.jpg',
-        },
-        {
-            name: 'John Smith',
-            position: 'Manager',
-            image: '/assets/image/team3.jpg',
-        },
-        {
-            name: 'Jane Smith',
-            position: 'Volunteer',
-            image: '/assets/image/team4.jpg',
-        },
-        {
-            name: 'John Doe',
-            position: 'Founder',
-            image: '/assets/image/team1.jpg',
-        },
-        {
-            name: 'Jane Doe',
-            position: 'Director',
-            image: '/assets/image/team2.jpg',
-        },
-        {
-            name: 'John Smith',
-            position: 'Manager',
-            image: '/assets/image/team3.jpg',
-        },
-        {
-            name: 'Jane Smith',
-            position: 'Volunteer',
-            image: '/assets/image/team4.jpg',
-        },
-    ]
+    const { data } = useApi();
+    const teamdata = Array.isArray(data?.api4) ? data.api4 : [];
+    console.log("teamdata", teamdata);
     return (
         <div>
             <Header
@@ -54,10 +15,10 @@ const Team = () => {
             />
 
             <div className="grid grid-cols-1 font-Lora md:px-10 px-5 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-                {teamMembers.map((member, index) => (
+                {teamdata.map((member, index) => (
                     <div key={index} className="flex flex-col items-center">
                         <img
-                            src={member.image}  
+                             src={member.images?.[0]?.url || "https://via.placeholder.com/300"}
                             alt={member.name}
                             className="md:w-[32vw] object-cover rounded-md   "
                         />
@@ -65,7 +26,7 @@ const Team = () => {
                         <h3 className="text-[1.4rem] text-[#072724] font-bold font mt-1">{member.name}</h3>
                     </div>
                 ))}
-            </div>
+            </div>  
         </div>
     )
 }

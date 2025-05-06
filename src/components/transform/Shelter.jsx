@@ -29,7 +29,7 @@ const Shelter = () => {
                     data-aos="fade-up"
                     data-aos-delay="100"
                     className='w-full md:w-1/2 p-5'>
-                    <img src='/assets/image/shelter.png' alt='Shelter' className='w-full h-auto object-cover rounded-md shadow-lg' />
+                    <img src='/assets/image/cowchild.webp' alt='Shelter' className='w-full md:h-[100vh] object-cover rounded-md shadow-lg' />
                 </div>
 
                 <div
